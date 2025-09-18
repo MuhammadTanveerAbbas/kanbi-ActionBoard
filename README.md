@@ -59,7 +59,7 @@ To get this project running on your local machine, follow these simple steps.
 
 1.  Clone the repository:
     ```sh
-    git clonehttps://github.com/MuhammadTanveerAbbas/KANBI.git
+    git clone https://github.com/MuhammadTanveerAbbas/kanbi-ActionBoard.git
     ```
 2.  Navigate to the project directory:
     ```sh
