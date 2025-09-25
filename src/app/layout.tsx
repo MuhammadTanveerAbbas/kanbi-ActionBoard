@@ -18,7 +18,7 @@ const rubikGlitch = Rubik_Glitch({
 });
 
 export const metadata: Metadata = {
-  title: 'KANBI | Turn Notes Into Actionable Tasks Instantly',
+  title: 'KANBI',
   description: 'AI-powered task management that transforms unstructured notes into an organized Kanban board. No login required, offline-first, and privacy-focused. Boost your productivity today.',
   keywords: 'task management, kanban board, ai productivity, note taking, project management, offline app, todo list',
   icons: {
