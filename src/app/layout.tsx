@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: 'AI-powered task management that transforms unstructured notes into an organized Kanban board. No login required, offline-first, and privacy-focused. Boost your productivity today.',
   keywords: 'task management, kanban board, ai productivity, note taking, project management, offline app, todo list',
   icons: {
-    icon: '/favicon.png',
+    icon: '/fevicon.png',
   },
 };
 
