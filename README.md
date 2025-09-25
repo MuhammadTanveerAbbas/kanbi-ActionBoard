@@ -1,8 +1,10 @@
-# KANBI: From Chaotic Notes to Effortless Action 🚀
-
-[![Made by Muhammad Tanveer Abbas](https://img.shields.io/badge/made%20by-Muhammad%20Tanveer%20Abbas-blue.svg?style=for-the-badge)](https://github.com/Muhammadtanveerabbas)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-green.svg?style=for-the-badge)](https://github.com/MuhammadTanveerAbbas/KANBI.git)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+<h1 align="center">KANBI 📃</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+</p>
 
 KANBI is a powerful, offline first, AI driven task management tool designed to bridge the gap between ideation and execution. It transforms your unstructured notes, meeting minutes, or brainstorms into a clear, actionable Kanban board, helping you and your team stay organized and productive.
 
@@ -14,13 +16,13 @@ We all capture brilliant ideas in notes, docs, and meetings, but too often, they
 
 ## ✨ The Solution
 
-KANBI is the bridge from insight to impact. It provides a seamless, AI-powered workflow that closes the loop between thinking and doing:
+KANBI is the bridge from insight to impact. It provides a seamless, AI powered workflow that closes the loop between thinking and doing:
 
 - **✍️ Input Any Text:** Simply paste your unstructured notes.
 - **🤖 AI-Powered Parsing:** Our smart AI instantly detects tasks, owners, and deadlines.
-- **📋 Instant Action Board:** Your tasks appear on a clean, drag-and-drop Kanban board.
+- **📋 Instant Action Board:** Your tasks appear on a clean, drag and drop Kanban board.
 - **📈 Track Your Progress:** Monitor your entire workflow with a clear progress tracker.
-- **💡 Get Smart Insights:** Receive AI-driven feedback to optimize your process and work smarter.
+- **💡 Get Smart Insights:** Receive AI driven feedback to optimize your process and work smarter.
 
 ---
 
@@ -30,7 +32,7 @@ KANBI is the bridge from insight to impact. It provides a seamless, AI-powered w
 - **🚫 No Login Required:** Jump right into planning without the friction of creating an account.
 - **🌐 Works Offline:** Your data is stored securely in your browser, so you can work anywhere, anytime.
 - **🌐 Drag and Drop Kanban Board:** Intuitively manage tasks across "To Do," "In Progress," and "Done" columns.
-- **💡 Smart Insights:** Go beyond tracking with AI-driven suggestions to optimize your workflow.
+- **💡 Smart Insights:** Go beyond tracking with AI driven suggestions to optimize your workflow.
 - **🔒 Privacy-Focused:** All processing happens in your browser. Your data is never sent to a server.
 
 ---
@@ -39,7 +41,6 @@ KANBI is the bridge from insight to impact. It provides a seamless, AI-powered w
 
 - **Framework:** [Next.js](https://nextjs.org/) (App Router)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) with [ShadCN UI](https://ui.shadcn.com/)
-- **AI:** [Google's Gemini Model](https://deepmind.google/technologies/gemini/) via [Genkit](https://firebase.google.com/docs/genkit)
 - **State Management:** React Hooks & `localStorage` for persistence
 - **Fonts:** [Google Fonts](https://fonts.google.com/) (Rubik Glitch & Space Grotesk)
 - **Icons:** [Lucide React](https://lucide.dev/guide/packages/lucide-react)
@@ -96,7 +97,7 @@ Here's a high-level overview of the project structure:
 │   │   └── globals.css     # Global styles and theme variables
 │   │
 │   ├── components/         # Reusable React components
-│   │   ├── ai/             # AI-related components (Task Generator, Insights Panel)
+│   │   ├── ai/             # AI related components (Task Generator, Insights Panel)
 │   │   ├── board/          # Kanban board components (Column, Card)
 │   │   ├── landing/        # Sections for the landing page
 │   │   ├── layout/         # Header and Footer
