@@ -51,9 +51,6 @@ export default function Kanbi() {
           <div className="text-center py-16 border-2 border-dashed rounded-lg bg-background/50">
             <Sparkles className="mx-auto h-12 w-12 text-muted-foreground" />
             <h3 className="mt-4 text-lg font-medium text-foreground">Your board is empty</h3>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Generate tasks from your notes above to get started.
-            </p>
           </div>
         )}
       </CardContent>
