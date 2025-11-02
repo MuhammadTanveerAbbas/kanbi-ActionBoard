@@ -3,14 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Task, TaskStatus } from '@/lib/types';
 
-// Sample data for initial state
-const sampleTasks: Task[] = [
-  { id: 'task-1', title: 'Deploy backend hotfix', status: 'Done', owner: 'Alice', deadline: '2024-05-20', createdAt: '2024-05-19T10:00:00Z', completedAt: '2024-05-19T14:30:00Z' },
-  { id: 'task-2', title: 'Review new landing page design', status: 'In Progress', owner: 'Bob', deadline: 'Tomorrow', createdAt: '2024-05-20T11:00:00Z' },
-  { id: 'task-3', title: 'Draft Q3 marketing report', status: 'To Do', owner: 'Alice', deadline: 'Next week', createdAt: '2024-05-21T09:00:00Z' },
-  { id: 'task-4', title: 'Finalize user survey questions', status: 'To Do', owner: 'Charlie', deadline: '2024-05-24', createdAt: '2024-05-21T12:00:00Z' },
-  { id: 'task-5', title: 'Onboard new marketing intern', status: 'To Do', owner: 'David', deadline: 'End of May', createdAt: '2024-05-22T16:00:00Z' },
-];
+
 
 export function useTasksStore() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -18,15 +11,24 @@ export function useTasksStore() {
   const [draggingTaskId, setDraggingTaskId] = useState<string | null>(null);
 
   useEffect(() => {
-    try {
-      const storedTasks = localStorage.getItem('kanbi-tasks');
-      if (storedTasks) {
-        setTasks(JSON.parse(storedTasks));
+    const loadTasks = () => {
+      try {
+        const storedTasks = localStorage.getItem('kanbi-tasks');
+        if (storedTasks) {
+          setTasks(JSON.parse(storedTasks));
+        }
+      } catch (error) {
+        console.error('Failed to load tasks from localStorage', error);
       }
-    } catch (error) {
-      console.error('Failed to load tasks from localStorage', error);
+      setIsInitialized(true);
+    };
+    
+    // Use requestIdleCallback for non-blocking initialization
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadTasks);
+    } else {
+      setTimeout(loadTasks, 0);
     }
-    setIsInitialized(true);
   }, []);
 
   useEffect(() => {

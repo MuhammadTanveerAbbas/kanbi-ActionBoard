@@ -59,7 +59,7 @@ export default function TaskGenerator({ addTask }: { addTask: (task: { title: st
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-3xl mx-auto">
       <div className="space-y-2">
         <Label htmlFor="task-text" className="text-lg font-semibold">Generate Tasks from Text</Label>
         <Textarea
@@ -67,8 +67,7 @@ export default function TaskGenerator({ addTask }: { addTask: (task: { title: st
           value={text}
           onChange={e => setText(e.target.value)}
           placeholder={placeholderText}
-          rows={12}
-          className="bg-card"
+          className="bg-card h-[300px] resize-none"
         />
       </div>
       <div className="flex justify-center">

@@ -36,23 +36,23 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="w-full py-16 sm:py-24">
+    <section className="w-full py-12 sm:py-24">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">
+        <h2 className="text-2xl font-bold tracking-tight sm:text-4xl font-headline">
           Designed for Action, Built for Speed
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="mt-3 text-sm sm:text-lg text-muted-foreground max-w-2xl mx-auto">
           KANBI is packed with features that get out of your way and let you focus on what matters.
         </p>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <Card key={feature.name} className="text-left bg-secondary/30 hover:bg-secondary/60 transition-colors">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-center gap-3 sm:gap-4">
                   {feature.icon}
-                  <h3 className="text-lg font-semibold">{feature.name}</h3>
+                  <h3 className="text-sm sm:text-lg font-semibold">{feature.name}</h3>
                 </div>
-                <p className="mt-2 text-muted-foreground">{feature.description}</p>
+                <p className="mt-2 text-xs sm:text-base text-muted-foreground">{feature.description}</p>
               </CardContent>
             </Card>
           ))}

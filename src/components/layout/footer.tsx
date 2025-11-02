@@ -24,7 +24,7 @@ export default function Footer() {
             <LayoutGrid className="h-6 w-6 text-primary" />
             <span className="font-headline text-lg">KANBI</span>
           </div>
-          <div className="text-center font-glitch text-lg tracking-wider">
+          <div className="text-center font-glitch text-sm sm:text-lg tracking-wider glitch-effect" data-text="Made by Muhammad Tanveer Abbas">
             Made by Muhammad Tanveer Abbas
           </div>
           <div className="flex space-x-4">

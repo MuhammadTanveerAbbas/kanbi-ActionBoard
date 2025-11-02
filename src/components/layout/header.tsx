@@ -15,7 +15,7 @@ export default function Header() {
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="flex items-center">
             <Button asChild variant="ghost">
-              <Link href="https://github.com/Muhammadtanveerabbas" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/MuhammadTanveerAbbas/kanbi-ActionBoard" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-4 w-4" />
                 GitHub
               </Link>

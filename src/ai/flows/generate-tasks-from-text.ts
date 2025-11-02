@@ -27,7 +27,12 @@ export type GenerateTasksFromTextOutput = z.infer<typeof GenerateTasksFromTextOu
 export async function generateTasksFromText(
   input: GenerateTasksFromTextInput
 ): Promise<GenerateTasksFromTextOutput> {
-  return generateTasksFromTextFlow(input);
+  try {
+    return await generateTasksFromTextFlow(input);
+  } catch (error) {
+    console.error('Error generating tasks:', error);
+    return [];
+  }
 }
 
 const generateTasksFromTextPrompt = ai.definePrompt({
@@ -55,7 +60,12 @@ const generateTasksFromTextFlow = ai.defineFlow(
     outputSchema: GenerateTasksFromTextOutputSchema,
   },
   async input => {
-    const {output} = await generateTasksFromTextPrompt(input);
-    return output!;
+    try {
+      const {output} = await generateTasksFromTextPrompt(input);
+      return output || [];
+    } catch (error) {
+      console.error('Flow error:', error);
+      return [];
+    }
   }
 );

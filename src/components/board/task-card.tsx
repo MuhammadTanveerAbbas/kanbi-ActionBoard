@@ -5,7 +5,7 @@ import { Task } from '@/lib/types';
 import { Card, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
-import { MoreHorizontal, User, Calendar, Trash2, Edit } from 'lucide-react';
+import { MoreHorizontal, User, Calendar, Trash2, Edit, Clock, Flag, Link } from 'lucide-react';
 import EditTaskDialog from './edit-task-dialog';
 import { cn } from '@/lib/utils';
 import { Badge } from '../ui/badge';
@@ -65,20 +65,54 @@ export default function TaskCard({ task, updateTask, deleteTask, isDragging, onD
             </DropdownMenuContent>
           </DropdownMenu>
         </CardHeader>
-        {(task.owner || task.deadline) && (
-          <CardFooter className="p-4 pt-0 flex flex-wrap gap-2">
-            {task.owner && (
+        {(task.owner || task.deadline || task.priority || task.tags || task.dependencies) && (
+          <CardFooter className="p-4 pt-0 space-y-2">
+            {/* Priority and Tags */}
+            <div className="flex flex-wrap gap-1">
+              {task.priority && (
+                <Badge className={`text-xs ${
+                  task.priority === 'Critical' ? 'bg-red-500' :
+                  task.priority === 'High' ? 'bg-orange-500' :
+                  task.priority === 'Medium' ? 'bg-yellow-500' : 'bg-green-500'
+                } text-white`}>
+                  <Flag className="h-2 w-2 mr-1" />
+                  {task.priority}
+                </Badge>
+              )}
+              {task.tags?.slice(0, 2).map(tag => (
+                <Badge key={tag} variant="secondary" className="text-xs">
+                  {tag}
+                </Badge>
+              ))}
+              {task.tags && task.tags.length > 2 && (
+                <Badge variant="outline" className="text-xs">
+                  +{task.tags.length - 2}
+                </Badge>
+              )}
+            </div>
+            
+            {/* Meta info */}
+            <div className="flex flex-wrap gap-2">
+              {task.owner && (
                 <Badge variant="secondary" className="font-normal">
-                    <User className="mr-1 h-3 w-3" />
-                    {task.owner}
+                  <User className="mr-1 h-3 w-3" />
+                  {task.owner}
                 </Badge>
-            )}
-            {task.deadline && (
+              )}
+              {task.deadline && (
                 <Badge variant="outline" className="font-normal">
-                    <Calendar className="mr-1 h-3 w-3" />
-                    {task.deadline}
+                  <Calendar className="mr-1 h-3 w-3" />
+                  {task.deadline}
                 </Badge>
-            )}
+              )}
+
+              {task.dependencies && task.dependencies.length > 0 && (
+                <Badge variant="outline" className="font-normal">
+                  <Link className="mr-1 h-3 w-3" />
+                  {task.dependencies.length}
+                </Badge>
+              )}
+            </div>
           </CardFooter>
         )}
       </Card>

@@ -36,25 +36,25 @@ const steps = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="w-full py-16 sm:py-24 bg-secondary/20">
+    <section className="w-full py-12 sm:py-24">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">
+        <h2 className="text-2xl font-bold tracking-tight sm:text-4xl font-headline">
           From Chaos to Clarity in 60 Seconds
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+        <p className="mt-3 text-sm sm:text-lg text-muted-foreground max-w-3xl mx-auto">
           A workflow so simple, it feels like magic. Go from messy notes to a structured plan without the manual effort.
         </p>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((step) => (
             <Card key={step.title} className="text-center bg-background/50">
-              <CardHeader>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-secondary/50">
+              <CardHeader className="pb-3 sm:pb-6">
+                <div className="mx-auto flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-secondary/50">
                   {step.icon}
                 </div>
               </CardHeader>
-              <CardContent>
-                <CardTitle className="mb-2">{step.title}</CardTitle>
-                <p className="text-muted-foreground">{step.description}</p>
+              <CardContent className="pt-0">
+                <CardTitle className="mb-2 text-sm sm:text-base">{step.title}</CardTitle>
+                <p className="text-xs sm:text-base text-muted-foreground">{step.description}</p>
               </CardContent>
             </Card>
           ))}

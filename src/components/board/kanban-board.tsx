@@ -1,6 +1,6 @@
 'use client';
 
-import { KANBAN_COLUMNS } from '@/lib/types';
+import { KANBAN_COLUMNS, TaskStatus } from '@/lib/types';
 import KanbanColumn from './kanban-column';
 import type { useTasksStore } from '@/hooks/use-tasks-store';
 import { useState } from 'react';
@@ -28,7 +28,7 @@ export default function KanbanBoard({ store }: KanbanBoardProps) {
     setDraggedOverColumn(status);
   };
 
-  const handleDrop = (e: React.DragEvent<HTMLDivElement>, status: any) => {
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>, status: TaskStatus) => {
     e.preventDefault();
     const taskId = e.dataTransfer.getData('taskId');
     if (taskId) {
@@ -42,7 +42,7 @@ export default function KanbanBoard({ store }: KanbanBoardProps) {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
       {KANBAN_COLUMNS.map(status => (
         <KanbanColumn
           key={status}
