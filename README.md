@@ -73,7 +73,6 @@ A polished, **production ready SaaS MVP** that’s:
 
 - 🤖 **AI Intelligence** : Task extraction, analytics, recommendations
 - 🧩 **Task Automation** : Auto prioritization, dependencies, reminders
-- 👥 **Collaboration Ready** : Real time UI simulation for teams
 - 💼 **Industry Templates** : 9 pre built templates across sectors
 - ⚙️ **Power Tools** : Import/export JSON or CSV, keyboard shortcuts
 - 🧠 **Privacy Mode** : Fully offline, no tracking
