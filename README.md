@@ -154,28 +154,20 @@ Deploy instantly → [Deploy to Vercel](https://github.com/MuhammadTanveerAbbas/
 
 <div align="center">
 
-### 👨‍💻 Developed by **Muhammad Tanveer Abbas**
+# 👨‍💻 Muhammad Tanveer Abbas
 
 **SaaS MVP Developer** • **AI Integration Expert** • **Full Stack Developer**
 
-💼 **Portfolio:** [https://muhammadtanveerabbas.vercel.app/](#)
+⚡ Specialized in Building Production Ready SaaS MVPs for founders in Weeks
 
-</div>
+**Next.js • TypeScript • Firebase • AI • Tailwind CSS**
 
----
-
-<div align="center">
-
-### ⚡ Specialized in Building Production Ready SaaS MVPs in Weeks not Months
-
-**Next.js • TypeScript • AI Integration • Tailwind CSS**
-
-</div>
+💼 **[View Portfolio](https://muhammadtanveerabbas.vercel.app/)**
 
 ---
 
-<div align="center">
+⭐ **Star this repo** if you find it inspiring!
 
-⭐ Star this repo if you find it useful! Built with ❤️ to showcase senior level SaaS development.
+Built with ❤️ to showcase professional SaaS MVP development.
 
 </div>
